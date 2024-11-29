@@ -265,7 +265,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 10,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -300,7 +299,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -316,7 +316,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Multiply",
         "Calculation Factor": 2,
         "Tint": "0,0.05,1,0.49",
         "Text Scope": {
@@ -351,7 +350,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Multiply"
       }
     },
     {
@@ -367,7 +367,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 13,
         "Tint": "0.86977,0.21845,0.37043,0.49",
         "Text Scope": {
@@ -402,7 +401,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -418,7 +418,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 30,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -453,7 +452,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -469,7 +469,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 5,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -504,7 +503,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -520,7 +520,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Multiply",
         "Calculation Factor": 2,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -555,7 +554,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Multiply"
       }
     },
     {
@@ -571,7 +571,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 10,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -606,7 +605,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -622,7 +622,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Add",
         "Calculation Factor": 10,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
@@ -657,7 +656,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Add"
       }
     },
     {
@@ -673,8 +673,7 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Subtract",
-        "Calculation Factor": -1,
+        "Calculation Factor": 1,
         "Tint": "0.63256,0,0,0.49",
         "Text Scope": {
           "Text": "-1",
@@ -708,7 +707,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Subtract"
       }
     },
     {
@@ -724,11 +724,10 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Multiply",
-        "Calculation Factor": 0.5,
+        "Calculation Factor": 1,
         "Tint": "1,0,0.93333,0.49",
         "Text Scope": {
-          "Text": "x .5",
+          "Text": "x 1",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -759,7 +758,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Multiply"
       }
     },
     {
@@ -775,7 +775,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Divide",
         "Calculation Factor": 2,
         "Tint": "0,0.63256,0.40062,0.49",
         "Text Scope": {
@@ -810,7 +809,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Divide"
       }
     },
     {
@@ -826,8 +826,7 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Subtract",
-        "Calculation Factor": -20,
+        "Calculation Factor": 1,
         "Tint": "0.88333,1,0,0.49",
         "Text Scope": {
           "Text": "-1",
@@ -861,7 +860,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Subtract"
       }
     },
     {
@@ -877,7 +877,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Subtract",
         "Calculation Factor": 5,
         "Tint": "0,0.8,0.48,0.49",
         "Text Scope": {
@@ -912,7 +911,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Subtract"
       }
     },
     {
@@ -928,7 +928,6 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Divide",
         "Calculation Factor": 2,
         "Tint": "0.63256,0,0,0.49",
         "Text Scope": {
@@ -963,7 +962,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Divide"
       }
     },
     {
@@ -979,8 +979,7 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Subtract",
-        "Calculation Factor": -1,
+        "Calculation Factor": 1,
         "Tint": "0.63256,0,0,0.49",
         "Text Scope": {
           "Text": "-1",
@@ -1014,7 +1013,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Subtract"
       }
     },
     {
@@ -1030,8 +1030,7 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Calc Type": "Subtract",
-        "Calculation Factor": -1,
+        "Calculation Factor": 1,
         "Tint": "0.63256,0,0,0.49",
         "Text Scope": {
           "Text": "-1",
@@ -1065,7 +1064,8 @@
             "Color": "0,0,0,1",
             "Offset": "4,4"
           }
-        }
+        },
+        "Calculation Type": "Subtract"
       }
     }
   ],

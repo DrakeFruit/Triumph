@@ -9,12 +9,21 @@
       {
         "__type": "Gate",
         "__guid": "adae59cd-7b58-41ad-9293-30f07a2596cc",
-        "CalculationCalcType": "Add",
-        "CalculationFactor": 5,
+        "CalculationFactor": 0,
+        "CalculationType": "Add",
         "Prefab": {
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         }
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "bc89db0d-725e-47b4-add3-8009f414be08",
+        "Center": "0,0,71.09976",
+        "IsTrigger": true,
+        "Scale": "25.59972,238.3001,115.9995",
+        "Static": false,
+        "SurfaceVelocity": "0,0,0"
       }
     ],
     "Children": [
@@ -40,15 +49,6 @@
             },
             "RenderType": "On",
             "Tint": "0.02496,0.74884,0,0.49"
-          },
-          {
-            "__type": "Sandbox.BoxCollider",
-            "__guid": "ab9a5f85-ac68-441c-a66d-1c694d299788",
-            "Center": "0,0,0",
-            "IsTrigger": true,
-            "Scale": "48.29978,53.89984,50.79981",
-            "Static": false,
-            "SurfaceVelocity": "0,0,0"
           }
         ]
       },
@@ -125,19 +125,6 @@
         ]
       },
       {
-        "Id": "Calculation Calc Type",
-        "Title": "Calculation Calc Type",
-        "Description": null,
-        "Group": null,
-        "Order": 0,
-        "Targets": [
-          {
-            "Id": "adae59cd-7b58-41ad-9293-30f07a2596cc",
-            "Property": "CalculationCalcType"
-          }
-        ]
-      },
-      {
         "Id": "Calculation Factor",
         "Title": "Calculation Factor",
         "Description": null,
@@ -173,6 +160,19 @@
           {
             "Id": "3a7632c7-cb85-4a15-a232-c732d892d768",
             "Property": "TextScope"
+          }
+        ]
+      },
+      {
+        "Id": "Calculation Type",
+        "Title": "Calculation Type",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "adae59cd-7b58-41ad-9293-30f07a2596cc",
+            "Property": "CalculationType"
           }
         ]
       }

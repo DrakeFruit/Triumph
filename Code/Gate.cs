@@ -4,18 +4,18 @@ using Sandbox;
 public sealed class Gate : Component
 {
 	[Property] public GameObject Prefab { get; set; }
-	[Property] public CalcType CalculationCalcType { get; set; }
-	[Property] public float CalculationFactor { get; set; }
-	public List<WarriorPathing> SpawnPrefabs(Vector3 position, List<WarriorPathing> warriors)
+	[Property] public CalcType CalculationType { get; set; }
+	[Property] public int CalculationFactor { get; set; }
+	public int GetAmount(List<WarriorPathing> warriors)
 	{
-		var amountNeeded = 0.0;
-		switch ( CalculationCalcType )
+		var amountNeeded = 0;
+		switch ( CalculationType )
 		{
 			case CalcType.Add:
-				amountNeeded = CalculationFactor;
+				amountNeeded = warriors.Count + CalculationFactor;
 				break;
 			case CalcType.Subtract:
-				amountNeeded = -CalculationFactor;
+				amountNeeded = warriors.Count - CalculationFactor;
 				break;
 			case CalcType.Multiply:
 				amountNeeded = warriors.Count * CalculationFactor;
@@ -25,20 +25,7 @@ public sealed class Gate : Component
 				break;
 		}
 
-		for ( var i = 0; i < amountNeeded; i++ )
-		{
-			if ( CalculationFactor >= 0 )
-			{
-				var warrior = Prefab.Clone( position - i );
-				warriors.Add( warrior.Components.GetInChildrenOrSelf<WarriorPathing>() );
-			}
-			else
-			{
-				warriors.Remove( warriors.First() );
-			}
-		}
-
-		return warriors;
+		return amountNeeded;
 	}
 	public enum CalcType
 	{

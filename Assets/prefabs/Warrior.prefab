@@ -3,6 +3,7 @@
     "__guid": "466b415d-8bc7-4e8b-abbd-88df83c252db",
     "Flags": 0,
     "Name": "warrior",
+    "Tags": "warrior",
     "Enabled": true,
     "Components": [
       {
@@ -54,10 +55,10 @@
       {
         "__type": "Sandbox.NavMeshAgent",
         "__guid": "d3b586bc-9239-4f68-a5ad-0a82aa826abc",
-        "Acceleration": 0,
+        "Acceleration": 100000,
         "Height": 72,
-        "MaxSpeed": 0,
-        "Radius": 12,
+        "MaxSpeed": 400,
+        "Radius": 8,
         "Separation": 1,
         "UpdatePosition": true,
         "UpdateRotation": true
