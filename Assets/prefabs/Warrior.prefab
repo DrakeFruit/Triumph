@@ -57,7 +57,7 @@
         "__guid": "d3b586bc-9239-4f68-a5ad-0a82aa826abc",
         "Acceleration": 100000,
         "Height": 72,
-        "MaxSpeed": 400,
+        "MaxSpeed": 500,
         "Radius": 8,
         "Separation": 1,
         "UpdatePosition": true,

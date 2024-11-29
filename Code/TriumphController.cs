@@ -34,7 +34,6 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 		
 		var gate = other.GetComponent<Gate>();
 		var amount = gate.GetAmount( Warriors );
-		Log.Info(amount);
 		while ( amount != Warriors.Count )
 		{
 			if ( Warriors.Count > amount )
