@@ -1,12 +1,12 @@
 using Sandbox;
+using Sandbox.Citizen;
 
 public sealed class WarriorPathing : Component
 {
-	[Property] TriumphController Controller { get; set; }
+	[RequireComponent] public NavMeshAgent Agent { get; set; }
+	[RequireComponent] public CitizenAnimationHelper Helper { get; set; }
 	protected override void OnFixedUpdate()
 	{
-		var targetDir = Controller.WorldPosition - LocalPosition;
-		LocalPosition += (targetDir) * Time.Delta * 5 ;
-		LocalRotation = Rotation.LookAt( targetDir );
+		Helper.WithVelocity( new Vector3(Agent.Velocity.x, 0, 0 ) );
 	}
 }

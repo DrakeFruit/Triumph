@@ -1,0 +1,211 @@
+{
+  "RootObject": {
+    "__guid": "1a410825-d6de-4852-ac0d-639e3d839247",
+    "Flags": 0,
+    "Name": "gate",
+    "Tags": "gate",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Gate",
+        "__guid": "adae59cd-7b58-41ad-9293-30f07a2596cc",
+        "CalculationCalcType": "Add",
+        "CalculationFactor": 5,
+        "Prefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/warrior.prefab"
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "635b915d-b265-4bbf-9a17-d819b987f3f1",
+        "Flags": 0,
+        "Name": "Model",
+        "Position": "0,0,70.78989",
+        "Scale": "0.406197,4.7696,2.310702",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "fb172776-e8d3-4759-9f20-b35fde230061",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "Model": "models/dev/box.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "0.02496,0.74884,0,0.49"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "ab9a5f85-ac68-441c-a66d-1c694d299788",
+            "Center": "0,0,0",
+            "IsTrigger": true,
+            "Scale": "48.29978,53.89984,50.79981",
+            "Static": false,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ]
+      },
+      {
+        "__guid": "e3ab7ce3-4860-4265-a08a-6965ff937e03",
+        "Flags": 0,
+        "Name": "Text",
+        "Position": "-13.77555,0,64",
+        "Scale": "1.006316,1,1.675413",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.TextRenderer",
+            "__guid": "3a7632c7-cb85-4a15-a232-c732d892d768",
+            "__version": 1,
+            "BlendMode": "Normal",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "Scale": 0.3,
+            "TextAlignment": "Center",
+            "TextScope": {
+              "Text": "",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "__variables": [
+      {
+        "Id": "Prefab",
+        "Title": "Prefab",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "adae59cd-7b58-41ad-9293-30f07a2596cc",
+            "Property": "Prefab"
+          }
+        ]
+      },
+      {
+        "Id": "Calculation Calc Type",
+        "Title": "Calculation Calc Type",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "adae59cd-7b58-41ad-9293-30f07a2596cc",
+            "Property": "CalculationCalcType"
+          }
+        ]
+      },
+      {
+        "Id": "Calculation Factor",
+        "Title": "Calculation Factor",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "adae59cd-7b58-41ad-9293-30f07a2596cc",
+            "Property": "CalculationFactor"
+          }
+        ]
+      },
+      {
+        "Id": "Tint",
+        "Title": "Tint",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "fb172776-e8d3-4759-9f20-b35fde230061",
+            "Property": "Tint"
+          }
+        ]
+      },
+      {
+        "Id": "Text Scope",
+        "Title": "Text Scope",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "3a7632c7-cb85-4a15-a232-c732d892d768",
+            "Property": "TextScope"
+          }
+        ]
+      }
+    ],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

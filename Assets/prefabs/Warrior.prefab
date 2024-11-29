@@ -1,0 +1,99 @@
+{
+  "RootObject": {
+    "__guid": "466b415d-8bc7-4e8b-abbd-88df83c252db",
+    "Flags": 0,
+    "Name": "warrior",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "WarriorPathing",
+        "__guid": "06636e66-8e40-4f47-96ff-6f3c40c9b5d4"
+      },
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "1b0111f7-e34a-4923-a64c-b6ea6272518b",
+        "BodyGroups": 341,
+        "CreateAttachments": false,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/citizen.vmdl",
+        "Morphs": {},
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Sequence": {
+          "Name": null
+        },
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+        "__guid": "06d74754-67f9-4fde-9862-6f629c8268cb",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "1b0111f7-e34a-4923-a64c-b6ea6272518b",
+          "go": "466b415d-8bc7-4e8b-abbd-88df83c252db",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "d3b586bc-9239-4f68-a5ad-0a82aa826abc",
+        "Acceleration": 0,
+        "Height": 72,
+        "MaxSpeed": 0,
+        "Radius": 12,
+        "Separation": 1,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      }
+    ],
+    "Children": [],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
