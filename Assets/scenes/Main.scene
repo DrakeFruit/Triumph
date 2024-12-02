@@ -10,9 +10,10 @@
         {
           "__type": "Sandbox.SceneInformation",
           "__guid": "5cd4c209-b026-4985-b887-bcd9f0cb899d",
+          "Changes": "",
           "Description": "",
           "SceneTags": "",
-          "Title": "minimal"
+          "Title": "Main"
         }
       ]
     },
@@ -33,6 +34,57 @@
           "LightColor": "0.94419,0.97767,1,1",
           "Shadows": true,
           "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "5118a548-3223-4833-8519-1f6499116b48",
+      "Flags": 0,
+      "Name": "Music",
+      "Position": "2910.424,-198.3711,382.7355",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "b654ecbf-e03b-45e4-b982-39ae692da2c3",
+          "Distance": 1000,
+          "DistanceAttenuation": true,
+          "DistanceAttenuationOverride": true,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": true,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": true,
+          "SoundEvent": "music/waves of time.sound",
+          "SoundOverride": true,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "music",
+            "Id": "408fb829-a9d7-4a9c-b871-b64ed89261ae"
+          },
+          "Volume": 0.7
         }
       ]
     },
@@ -65,7 +117,7 @@
           "MaxDistance": 512,
           "MultiBounce": false,
           "Projection": "Sphere",
-          "RenderDynamically": false,
+          "RenderDynamically": true,
           "TintColor": "1,1,1,1",
           "UpdateStrategy": "OnEnabled",
           "ZFar": 4096,
@@ -149,6 +201,7 @@
         {
           "__type": "TriumphController",
           "__guid": "511133b7-cec1-4cfc-a422-2f82b636b9d4",
+          "GateSound": "sounds/gate.sound",
           "RunSpeed": 400,
           "StrafeSpeed": 200,
           "WarriorPrefab": {
@@ -409,7 +462,7 @@
       "__guid": "c4c8be21-816f-41c6-94e9-19001585b1f5",
       "Flags": 0,
       "Name": "gate (6)",
-      "Position": "2112,-128,0",
+      "Position": "2112,128,0",
       "Tags": "gate",
       "Enabled": true,
       "__Prefab": "prefabs/gate.prefab",
@@ -421,7 +474,7 @@
         "Calculation Factor": 30,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
-          "Text": "\u002B30",
+          "Text": "-50 \u002B 80",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -521,9 +574,9 @@
           "prefab": "prefabs/warrior.prefab"
         },
         "Calculation Factor": 2,
-        "Tint": "0.02496,0.74884,0,0.49",
+        "Tint": "0.56744,0.22403,0.01056,0.49",
         "Text Scope": {
-          "Text": "x 2",
+          "Text": "x 4 / 2",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -571,10 +624,10 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Factor": 10,
-        "Tint": "0.02496,0.74884,0,0.49",
+        "Calculation Factor": 6,
+        "Tint": "1,1,1,0.49",
         "Text Scope": {
-          "Text": "\u002B10",
+          "Text": "-(-2 x 3)",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -622,10 +675,10 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Factor": 10,
+        "Calculation Factor": 5,
         "Tint": "0.02496,0.74884,0,0.49",
         "Text Scope": {
-          "Text": "\u002B10",
+          "Text": "(20 \u002B 4) / 5",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -817,7 +870,7 @@
       "__guid": "eb649778-8f0f-4250-b8ab-3ea4046bd56e",
       "Flags": 0,
       "Name": "gate (7)",
-      "Position": "2112,128,0",
+      "Position": "2112,-128,0",
       "Tags": "gate",
       "Enabled": true,
       "__Prefab": "prefabs/gate.prefab",
@@ -829,7 +882,7 @@
         "Calculation Factor": 1,
         "Tint": "0.88333,1,0,0.49",
         "Text Scope": {
-          "Text": "-1",
+          "Text": "-20",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -929,7 +982,7 @@
           "prefab": "prefabs/warrior.prefab"
         },
         "Calculation Factor": 2,
-        "Tint": "0.63256,0,0,0.49",
+        "Tint": "0.27411,0,0.63256,0.49",
         "Text Scope": {
           "Text": "/2",
           "TextColor": "1,1,1,1",
@@ -979,10 +1032,10 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Factor": 1,
-        "Tint": "0.63256,0,0,0.49",
+        "Calculation Factor": 12,
+        "Tint": "0.12867,0.07165,0.64186,0.49",
         "Text Scope": {
-          "Text": "-1",
+          "Text": "\u002B(3 x 4)",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -1014,7 +1067,7 @@
             "Offset": "4,4"
           }
         },
-        "Calculation Type": "Subtract"
+        "Calculation Type": "Add"
       }
     },
     {
@@ -1030,10 +1083,10 @@
           "_type": "gameobject",
           "prefab": "prefabs/warrior.prefab"
         },
-        "Calculation Factor": 1,
-        "Tint": "0.63256,0,0,0.49",
+        "Calculation Factor": 10,
+        "Tint": "0.63721,0.62659,0,0.49",
         "Text Scope": {
-          "Text": "-1",
+          "Text": "(2 x 20) / 4",
           "TextColor": "1,1,1,1",
           "FontName": "Poppins",
           "FontSize": 128,
@@ -1065,7 +1118,7 @@
             "Offset": "4,4"
           }
         },
-        "Calculation Type": "Subtract"
+        "Calculation Type": "Add"
       }
     }
   ],
@@ -1079,7 +1132,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "Metadata": {
-      "Title": "minimal"
+      "Title": "Main"
     },
     "NavMesh": {
       "Enabled": true,
@@ -1095,8 +1148,10 @@
     }
   },
   "ResourceVersion": 2,
-  "Title": "minimal",
+  "Title": "Main",
   "Description": null,
-  "__references": [],
+  "__references": [
+    "carsonk.mus_waves_of_time#60001"
+  ],
   "__version": 2
 }

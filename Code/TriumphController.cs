@@ -8,6 +8,8 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 	[Property] public float StrafeSpeed { get; set; } = 250;
 	[Property] public float RunSpeed { get; set; } = 200;
 	[Property] public GameObject WarriorPrefab { get; set; }
+	[Property] public SoundEvent GateSound { get; set; }
+	[Property] public SoundEvent WinSound { get; set; }
 	public List<WarriorPathing> Warriors { get; set; } = new();
 	protected override void OnStart()
 	{
@@ -32,6 +34,7 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 	{
 		if ( !other.Tags.Has( "gate" ) ) return;
 		
+		Sound.Play( GateSound );
 		var gate = other.GetComponent<Gate>();
 		var amount = gate.GetAmount( Warriors );
 		while ( amount != Warriors.Count )
