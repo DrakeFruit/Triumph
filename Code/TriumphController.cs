@@ -10,9 +10,13 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 	[Property] public GameObject WarriorPrefab { get; set; }
 	[Property] public SoundEvent GateSound { get; set; }
 	[Property] public SoundEvent WinSound { get; set; }
+	public WinScreen WinPanel { get; set; }
+	public LoseScreen LosePanel { get; set; }
 	public List<WarriorPathing> Warriors { get; set; } = new();
 	protected override void OnStart()
 	{
+		WinPanel = Components.GetInChildrenOrSelf<WinScreen>( true );
+		LosePanel = Components.GetInChildrenOrSelf<LoseScreen>( true );
 		WarriorPrefab.Clone( LocalPosition );
 		foreach ( var i in Scene.GetAllComponents<WarriorPathing>() )
 		{
@@ -21,7 +25,7 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 	}
 	protected override void OnFixedUpdate()
 	{
-		if ( !Warriors.Any() ) Scene.TimeScale = 0; //placeholder for losing, TODO: implement UI for this
+		if ( !Warriors.Any() ) Lose();
 		LocalPosition += new Vector3( RunSpeed, Input.AnalogMove.y * StrafeSpeed, 0 ) * Time.Delta;
 		foreach ( var i in Warriors )
 		{
@@ -32,6 +36,10 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 
 	public void OnTriggerEnter( GameObject other )
 	{
+		if ( other.Tags.Has( "finish" ) )
+		{
+			Win();
+		}
 		if ( !other.Tags.Has( "gate" ) ) return;
 		
 		Sound.Play( GateSound );
@@ -50,5 +58,18 @@ public sealed class TriumphController : Component, Component.ITriggerListener
 				Warriors.Add( gate.Prefab.Clone( LocalPosition ).Components.GetInChildrenOrSelf<WarriorPathing>() );
 			}
 		}
+	}
+
+	public void Win()
+	{
+		WinPanel.Enabled = true;
+		Scene.TimeScale = 0;
+		Sound.Play( WinSound );
+		WinPanel.FinalCount = Warriors.Count();
+	}
+	public void Lose()
+	{
+		LosePanel.Enabled = true;
+		Scene.TimeScale = 0;
 	}
 }

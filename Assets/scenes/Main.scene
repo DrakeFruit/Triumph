@@ -207,7 +207,8 @@
           "WarriorPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/warrior.prefab"
-          }
+          },
+          "WinSound": "sounds/win.sound"
         },
         {
           "__type": "Sandbox.BoxCollider",
@@ -300,826 +301,2078 @@
               "__type": "Sandbox.Sharpen",
               "__guid": "0bffee5e-19f2-41c4-88f9-faefbcce6bf4",
               "Scale": 0.2
+            },
+            {
+              "__type": "Sandbox.LoseScreen",
+              "__guid": "ef81af6b-d438-4055-8eda-560f6435c6c2",
+              "__enabled": false
+            },
+            {
+              "__type": "Sandbox.WinScreen",
+              "__guid": "9b8a9056-046c-4e72-9c08-b754cf5ffcdc",
+              "__enabled": false
+            },
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "ad45d719-5f72-46fb-aa6a-2903c3697fb0",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
             }
           ]
         }
       ]
     },
     {
-      "__guid": "a983032a-c88b-479d-8ef4-312c8831a0e5",
+      "__guid": "f6bbb5f5-4b07-44c6-b894-5036409fa604",
       "Flags": 0,
-      "Name": "gate",
-      "Position": "511.9999,-128,0",
-      "Tags": "gate",
+      "Name": "finish",
+      "Position": "12160,0,-0.00003194809",
+      "Tags": "finish",
       "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "112f5c6c-ad33-45ab-9482-5c19d15cfbb5",
+          "Center": "0,0,71.09976",
+          "IsTrigger": true,
+          "Scale": "25.59972,238.3001,115.9995",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "e282fafe-e081-4a00-8059-c3ce9783c934",
+          "Flags": 0,
+          "Name": "Model",
+          "Position": "0,0,70.78989",
+          "Scale": "0.406197,9.594672,2.310702",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "3ff929ee-8287-4f9a-98f6-e83693d9ea3a",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "Model": "models/dev/box.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "0.21667,1,0,0.71"
+            }
+          ]
         },
-        "Calculation Factor": 10,
-        "Tint": "0.02496,0.74884,0,0.49",
-        "Text Scope": {
-          "Text": "\u002B10",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          }
-        },
-        "Calculation Type": "Add"
-      }
+        {
+          "__guid": "19b8e1c4-55ed-4e76-bfc6-ff1f174904e2",
+          "Flags": 0,
+          "Name": "Text",
+          "Position": "-13.77555,0,64",
+          "Scale": "1.006316,1,1.675413",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "c530274b-5cfe-4726-843d-218d64377b46",
+              "__version": 1,
+              "BlendMode": "Normal",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "Scale": 0.3,
+              "TextAlignment": "Center",
+              "TextScope": {
+                "Text": "Finish",
+                "TextColor": "1,1,1,1",
+                "FontName": "Poppins",
+                "FontSize": 128,
+                "FontWeight": 800,
+                "FontItalic": false,
+                "LineHeight": 1,
+                "LetterSpacing": 0,
+                "WordSpacing": 0,
+                "Outline": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,1,1"
+                },
+                "Shadow": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                },
+                "OutlineUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,1,0,1"
+                },
+                "ShadowUnder": {
+                  "Enabled": false,
+                  "Size": 4,
+                  "Color": "0,0,0,1",
+                  "Offset": "4,4"
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "__guid": "fff9cf77-c1f2-4d5d-972c-4e341809eecf",
+      "__guid": "8f9bd29a-ed5e-4750-831d-971426119697",
       "Flags": 0,
-      "Name": "gate (2)",
-      "Position": "1024,-128,0",
-      "Tags": "gate",
+      "Name": "Gates",
       "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 2,
-        "Tint": "0,0.05,1,0.49",
-        "Text Scope": {
-          "Text": "x2",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+      "Children": [
+        {
+          "__guid": "e456bc1a-d609-4d21-bb99-e6dec39409b6",
+          "Flags": 0,
+          "Name": "gate (31)",
+          "Position": "9856,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 10,
+            "Tint": "0.63721,0.62659,0,0.49",
+            "Text Scope": {
+              "Text": "(2 x 20) / 4",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Multiply"
-      }
-    },
-    {
-      "__guid": "1a800507-1c4d-4fd9-8adf-73ab84611066",
-      "Flags": 0,
-      "Name": "gate (4)",
-      "Position": "1536,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 13,
-        "Tint": "0.86977,0.21845,0.37043,0.49",
-        "Text Scope": {
-          "Text": "\u002B13",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "3bc656b2-483c-4d7d-b6ff-6025f90bf6d2",
+          "Flags": 0,
+          "Name": "gate (15)",
+          "Position": "4864,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 10,
+            "Tint": "0.63721,0.62659,0,0.49",
+            "Text Scope": {
+              "Text": "(2 x 20) / 4",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "c4c8be21-816f-41c6-94e9-19001585b1f5",
-      "Flags": 0,
-      "Name": "gate (6)",
-      "Position": "2112,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 30,
-        "Tint": "0.02496,0.74884,0,0.49",
-        "Text Scope": {
-          "Text": "-50 \u002B 80",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "9a3a6662-fb6c-46ed-866f-68e10751c0f3",
+          "Flags": 0,
+          "Name": "gate (30)",
+          "Position": "9088,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 12,
+            "Tint": "0.12867,0.07165,0.64186,0.49",
+            "Text Scope": {
+              "Text": "\u002B(3 x 4)",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "6442a93c-0007-479c-b646-919b33325b09",
-      "Flags": 0,
-      "Name": "gate (8)",
-      "Position": "2624,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 5,
-        "Tint": "0.02496,0.74884,0,0.49",
-        "Text Scope": {
-          "Text": "\u002B5",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "3e5b45db-96fe-4437-9165-5b2abd32bc01",
+          "Flags": 0,
+          "Name": "gate (13)",
+          "Position": "4096,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 12,
+            "Tint": "0.12867,0.07165,0.64186,0.49",
+            "Text Scope": {
+              "Text": "\u002B(3 x 4)",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "0cd6e2ca-448e-467d-9ce2-8ba88a896562",
-      "Flags": 0,
-      "Name": "gate (10)",
-      "Position": "3328,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 2,
-        "Tint": "0.56744,0.22403,0.01056,0.49",
-        "Text Scope": {
-          "Text": "x 4 / 2",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "13190d9b-603c-4c51-a361-a6952ea38f6b",
+          "Flags": 0,
+          "Name": "gate (29)",
+          "Position": "8320,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.27411,0,0.63256,0.49",
+            "Text Scope": {
+              "Text": "/2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
           }
         },
-        "Calculation Type": "Multiply"
-      }
-    },
-    {
-      "__guid": "1f438bfd-33d0-4ae7-a7de-775a2b012b1b",
-      "Flags": 0,
-      "Name": "gate (12)",
-      "Position": "4096,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 6,
-        "Tint": "1,1,1,0.49",
-        "Text Scope": {
-          "Text": "-(-2 x 3)",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "f95c9072-be26-472b-8121-a835635e6256",
+          "Flags": 0,
+          "Name": "gate (11)",
+          "Position": "3328,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.27411,0,0.63256,0.49",
+            "Text Scope": {
+              "Text": "/2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "16f849b6-b248-437a-ae1c-ec5f680a7661",
-      "Flags": 0,
-      "Name": "gate (14)",
-      "Position": "4864,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 5,
-        "Tint": "0.02496,0.74884,0,0.49",
-        "Text Scope": {
-          "Text": "(20 \u002B 4) / 5",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "a98fd745-1911-4619-b66f-11b0a8f884f4",
+          "Flags": 0,
+          "Name": "gate (28)",
+          "Position": "7616,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 14,
+            "Tint": "0,0.8,0.48,0.49",
+            "Text Scope": {
+              "Text": "\u002B27 - 13",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "0354891f-5f33-47fd-92ff-3be51f2ff5a2",
-      "Flags": 0,
-      "Name": "gate (1)",
-      "Position": "511.9999,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 1,
-        "Tint": "0.63256,0,0,0.49",
-        "Text Scope": {
-          "Text": "-1",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "075ed39b-9ab8-413f-a1c4-d46de606dda9",
+          "Flags": 0,
+          "Name": "gate (9)",
+          "Position": "2624,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "0,0.8,0.48,0.49",
+            "Text Scope": {
+              "Text": "\u002B15 - 20",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
           }
         },
-        "Calculation Type": "Subtract"
-      }
-    },
-    {
-      "__guid": "aebb5f31-f975-45ef-a7bb-de759dba9524",
-      "Flags": 0,
-      "Name": "gate (3)",
-      "Position": "1024,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 1,
-        "Tint": "1,0,0.93333,0.49",
-        "Text Scope": {
-          "Text": "x 1",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "0e448715-bda4-450d-a062-5bfbd66025d2",
+          "Flags": 0,
+          "Name": "gate (27)",
+          "Position": "7104,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 1,
+            "Tint": "0.88333,1,0,0.49",
+            "Text Scope": {
+              "Text": "-20",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
           }
         },
-        "Calculation Type": "Multiply"
-      }
-    },
-    {
-      "__guid": "ccf7a983-5c09-48c9-9970-eb4937ed3f90",
-      "Flags": 0,
-      "Name": "gate (5)",
-      "Position": "1536,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 2,
-        "Tint": "0,0.63256,0.40062,0.49",
-        "Text Scope": {
-          "Text": "/2",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "eb649778-8f0f-4250-b8ab-3ea4046bd56e",
+          "Flags": 0,
+          "Name": "gate (7)",
+          "Position": "2112,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 1,
+            "Tint": "0.88333,1,0,0.49",
+            "Text Scope": {
+              "Text": "-20",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
           }
         },
-        "Calculation Type": "Divide"
-      }
-    },
-    {
-      "__guid": "eb649778-8f0f-4250-b8ab-3ea4046bd56e",
-      "Flags": 0,
-      "Name": "gate (7)",
-      "Position": "2112,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 1,
-        "Tint": "0.88333,1,0,0.49",
-        "Text Scope": {
-          "Text": "-20",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "5406dcad-992c-403f-b220-70e6f2a9872f",
+          "Flags": 0,
+          "Name": "gate (42)",
+          "Position": "11520,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0,0.63256,0.40062,0.49",
+            "Text Scope": {
+              "Text": "/2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
           }
         },
-        "Calculation Type": "Subtract"
-      }
-    },
-    {
-      "__guid": "075ed39b-9ab8-413f-a1c4-d46de606dda9",
-      "Flags": 0,
-      "Name": "gate (9)",
-      "Position": "2624,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 5,
-        "Tint": "0,0.8,0.48,0.49",
-        "Text Scope": {
-          "Text": "\u002B15 - 20",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "58b8c5ab-6967-4c2f-b1a9-6e975e42bced",
+          "Flags": 0,
+          "Name": "gate (26)",
+          "Position": "6528,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 4,
+            "Tint": "0,0.63256,0.40062,0.49",
+            "Text Scope": {
+              "Text": "/4",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
           }
         },
-        "Calculation Type": "Subtract"
-      }
-    },
-    {
-      "__guid": "f95c9072-be26-472b-8121-a835635e6256",
-      "Flags": 0,
-      "Name": "gate (11)",
-      "Position": "3328,-128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 2,
-        "Tint": "0.27411,0,0.63256,0.49",
-        "Text Scope": {
-          "Text": "/2",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "ccf7a983-5c09-48c9-9970-eb4937ed3f90",
+          "Flags": 0,
+          "Name": "gate (5)",
+          "Position": "1536,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0,0.63256,0.40062,0.49",
+            "Text Scope": {
+              "Text": "/2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
           }
         },
-        "Calculation Type": "Divide"
-      }
-    },
-    {
-      "__guid": "3e5b45db-96fe-4437-9165-5b2abd32bc01",
-      "Flags": 0,
-      "Name": "gate (13)",
-      "Position": "4096,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 12,
-        "Tint": "0.12867,0.07165,0.64186,0.49",
-        "Text Scope": {
-          "Text": "\u002B(3 x 4)",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "3fa45462-cc27-4acd-a6c0-aeb1357fe088",
+          "Flags": 0,
+          "Name": "gate (41)",
+          "Position": "11008,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 1,
+            "Tint": "1,0,0.93333,0.49",
+            "Text Scope": {
+              "Text": "x 1",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
           }
         },
-        "Calculation Type": "Add"
-      }
-    },
-    {
-      "__guid": "3bc656b2-483c-4d7d-b6ff-6025f90bf6d2",
-      "Flags": 0,
-      "Name": "gate (15)",
-      "Position": "4864,128,0",
-      "Tags": "gate",
-      "Enabled": true,
-      "__Prefab": "prefabs/gate.prefab",
-      "__PrefabVariables": {
-        "Prefab": {
-          "_type": "gameobject",
-          "prefab": "prefabs/warrior.prefab"
-        },
-        "Calculation Factor": 10,
-        "Tint": "0.63721,0.62659,0,0.49",
-        "Text Scope": {
-          "Text": "(2 x 20) / 4",
-          "TextColor": "1,1,1,1",
-          "FontName": "Poppins",
-          "FontSize": 128,
-          "FontWeight": 800,
-          "FontItalic": false,
-          "LineHeight": 1,
-          "LetterSpacing": 0,
-          "WordSpacing": 0,
-          "Outline": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,1,1"
-          },
-          "Shadow": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
-          },
-          "OutlineUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,1,0,1"
-          },
-          "ShadowUnder": {
-            "Enabled": false,
-            "Size": 4,
-            "Color": "0,0,0,1",
-            "Offset": "4,4"
+        {
+          "__guid": "039083d9-1b70-4741-a372-65ba7240ad29",
+          "Flags": 0,
+          "Name": "gate (25)",
+          "Position": "6016,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "1,0,0.93333,0.49",
+            "Text Scope": {
+              "Text": "-15 \u002B 20",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
           }
         },
-        "Calculation Type": "Add"
-      }
+        {
+          "__guid": "aebb5f31-f975-45ef-a7bb-de759dba9524",
+          "Flags": 0,
+          "Name": "gate (3)",
+          "Position": "1024,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 1,
+            "Tint": "1,0,0.93333,0.49",
+            "Text Scope": {
+              "Text": "x 1",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "8a1ba948-53c3-40f8-8045-6f1fa83c8053",
+          "Flags": 0,
+          "Name": "gate (40)",
+          "Position": "10496,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.63256,0,0,0.49",
+            "Text Scope": {
+              "Text": "x2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "ed49cc5e-1699-49d3-9cc6-b315a514ebcb",
+          "Flags": 0,
+          "Name": "gate (24)",
+          "Position": "5504,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 0,
+            "Tint": "0.63256,0,0,0.49",
+            "Text Scope": {
+              "Text": "\u002B200 - 400 / 2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 108.24,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "0354891f-5f33-47fd-92ff-3be51f2ff5a2",
+          "Flags": 0,
+          "Name": "gate (1)",
+          "Position": "511.9999,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 1,
+            "Tint": "0.63256,0,0,0.49",
+            "Text Scope": {
+              "Text": "-1",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
+          }
+        },
+        {
+          "__guid": "072874bc-a5c6-4980-a073-86fd3b54faba",
+          "Flags": 0,
+          "Name": "gate (23)",
+          "Position": "9856,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "(20 \u002B 4) / 5",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "16f849b6-b248-437a-ae1c-ec5f680a7661",
+          "Flags": 0,
+          "Name": "gate (14)",
+          "Position": "4864,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "(20 \u002B 4) / 5",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "bad44439-db4d-4fb7-9a97-3c5840ee5c09",
+          "Flags": 0,
+          "Name": "gate (22)",
+          "Position": "9088,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 6,
+            "Tint": "1,1,1,0.49",
+            "Text Scope": {
+              "Text": "-(-2 x 3)",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "1f438bfd-33d0-4ae7-a7de-775a2b012b1b",
+          "Flags": 0,
+          "Name": "gate (12)",
+          "Position": "4096,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 6,
+            "Tint": "1,1,1,0.49",
+            "Text Scope": {
+              "Text": "-(-2 x 3)",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "0bc22803-0606-450b-bd55-803d8fb5d3df",
+          "Flags": 0,
+          "Name": "gate (21)",
+          "Position": "8320,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.56744,0.22403,0.01056,0.49",
+            "Text Scope": {
+              "Text": "x 4 / 2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "0cd6e2ca-448e-467d-9ce2-8ba88a896562",
+          "Flags": 0,
+          "Name": "gate (10)",
+          "Position": "3328,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.56744,0.22403,0.01056,0.49",
+            "Text Scope": {
+              "Text": "x 4 / 2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "1b4f7d5f-d2c0-42c6-81a9-bb72765e7945",
+          "Flags": 0,
+          "Name": "gate (20)",
+          "Position": "7616,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 17,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "\u002B40 - 23",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "6442a93c-0007-479c-b646-919b33325b09",
+          "Flags": 0,
+          "Name": "gate (8)",
+          "Position": "2624,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "\u002B5",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "faa80558-715b-4571-a26a-d69a813ead75",
+          "Flags": 0,
+          "Name": "gate (19)",
+          "Position": "7104,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 30,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "-50",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "c4c8be21-816f-41c6-94e9-19001585b1f5",
+          "Flags": 0,
+          "Name": "gate (6)",
+          "Position": "2112,128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 30,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "-50 \u002B 80",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "9caa93f6-895e-4a3c-ad81-35bd30ee28a0",
+          "Flags": 0,
+          "Name": "gate (34)",
+          "Position": "11520,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 13,
+            "Tint": "0.86977,0.21845,0.37043,0.49",
+            "Text Scope": {
+              "Text": "\u002B13",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "37797f49-9190-4130-b25e-068ab2e68fa5",
+          "Flags": 0,
+          "Name": "gate (18)",
+          "Position": "6528,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 12,
+            "Tint": "0.86977,0.21845,0.37043,0.49",
+            "Text Scope": {
+              "Text": "-12",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
+          }
+        },
+        {
+          "__guid": "1a800507-1c4d-4fd9-8adf-73ab84611066",
+          "Flags": 0,
+          "Name": "gate (4)",
+          "Position": "1536,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 13,
+            "Tint": "0.86977,0.21845,0.37043,0.49",
+            "Text Scope": {
+              "Text": "\u002B13",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        },
+        {
+          "__guid": "cef223c7-fdcd-45a3-a4f5-4e5779ab88c4",
+          "Flags": 0,
+          "Name": "gate (33)",
+          "Position": "11008,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0,0.05,1,0.49",
+            "Text Scope": {
+              "Text": "x2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "f5599050-89af-49c1-b138-32dee8b30091",
+          "Flags": 0,
+          "Name": "gate (17)",
+          "Position": "6016,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 20,
+            "Tint": "0,0.05,1,0.49",
+            "Text Scope": {
+              "Text": "-20",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
+          }
+        },
+        {
+          "__guid": "fff9cf77-c1f2-4d5d-972c-4e341809eecf",
+          "Flags": 0,
+          "Name": "gate (2)",
+          "Position": "1024,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0,0.05,1,0.49",
+            "Text Scope": {
+              "Text": "x2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Multiply"
+          }
+        },
+        {
+          "__guid": "2be37584-de3f-41ae-aaf7-53d09c4ee823",
+          "Flags": 0,
+          "Name": "gate (32)",
+          "Position": "10496,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 2,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "/2",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Divide"
+          }
+        },
+        {
+          "__guid": "26241784-76ba-4844-bc5d-d4bba80201d8",
+          "Flags": 0,
+          "Name": "gate (16)",
+          "Position": "5504,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 5,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "\u002B10 - 15",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Subtract"
+          }
+        },
+        {
+          "__guid": "a983032a-c88b-479d-8ef4-312c8831a0e5",
+          "Flags": 0,
+          "Name": "gate",
+          "Position": "511.9999,-128,0",
+          "Tags": "gate",
+          "Enabled": true,
+          "__Prefab": "prefabs/gate.prefab",
+          "__PrefabVariables": {
+            "Prefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/warrior.prefab"
+            },
+            "Calculation Factor": 10,
+            "Tint": "0.02496,0.74884,0,0.49",
+            "Text Scope": {
+              "Text": "\u002B10",
+              "TextColor": "1,1,1,1",
+              "FontName": "Poppins",
+              "FontSize": 128,
+              "FontWeight": 800,
+              "FontItalic": false,
+              "LineHeight": 1,
+              "LetterSpacing": 0,
+              "WordSpacing": 0,
+              "Outline": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,1,1"
+              },
+              "Shadow": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              },
+              "OutlineUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,1,0,1"
+              },
+              "ShadowUnder": {
+                "Enabled": false,
+                "Size": 4,
+                "Color": "0,0,0,1",
+                "Offset": "4,4"
+              }
+            },
+            "Calculation Type": "Add"
+          }
+        }
+      ]
     }
   ],
   "SceneProperties": {

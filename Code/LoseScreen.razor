@@ -1,0 +1,17 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="title">You Lose!</div>
+	<div class="count" onclick=@( () => Restart() )>Restart</div>
+</root>
+
+@code
+{
+	public void Restart()
+	{
+		Scene.Load( Scene.Source );
+	}
+}

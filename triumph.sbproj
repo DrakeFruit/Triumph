@@ -1,7 +1,7 @@
 {
   "Title": "Triumph - Battle Simulator",
   "Type": "game",
-  "Org": "local",
+  "Org": "drakefruit",
   "Ident": "triumph",
   "Schema": 1,
   "IncludeSourceFiles": false,

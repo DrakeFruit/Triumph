@@ -1,0 +1,20 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="title">You Win!</div>
+	<div class="count">You amassed @FinalCount stupid sausage face idiots</div>
+	<div class="count" onclick=@( () => Restart() )>Restart</div>
+</root>
+
+@code
+{
+	public float FinalCount { get; set; }
+
+	public void Restart()
+	{
+		Scene.Load( Scene.Source );
+	}
+}
